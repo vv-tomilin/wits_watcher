@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Wits Watcher</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="main">
+
+    <div class="add-well-btn" id="add-well-btn">
+      <div>ДОБАВИТЬ</div>
+    </div>
+
+    <div class="wells-container" id="wells-container"></div>
+
+    <div class="add-well-modal hide" id="add-well-modal">
+      <div class="add-modal-close" id="add-modal-close">X</div>
+      <form class="modal-form">
+        <div class="input-block">
+          <div>
+            <label class="modal-input-label" for="bush-name">Название куста:</label>
+          </div>
+          <input class="modal-input" id="bush-name" type="text" />
+        </div>
+        <div class="input-block">
+          <div>
+            <label class="modal-input-label" class="modal-input-label" for="api-link">Ссылка для подключения:</label>
+          </div>
+          <input class="modal-input" id="api-link" type="text" />
+        </div>
+        <div class="create-btn-wrapper">
+          <div class="modal-add-well-btn" id="add-well-modal-btn">Создать</div>
+        </div>
+      </form>
+    </div>
+
+    <div class="validate-popup hide" id="validate-popup">
+      <div class="validate-err-text" id="validate-err-text">ОШИБКА</div>
+      <div class="btn-popup-close" id="btn-popup-close">OK</div>
+    </div>
+
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

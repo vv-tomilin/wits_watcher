@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(205 237 226);
+}
+
+.main {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  padding-top: 40px;
+
+  height: 100%;
+  width: 100vw;
+}
+
+.wells-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  margin-top: 15px;
+}
+
+.well-card {
+  position: relative;
+
+  padding: 20px 20px 0 20px;;
+  margin: 5px;
+
+  width: 250px;
+  height: 90px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background: rgb(254, 255, 193);
+
+  box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.well-card-status {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #0000005e;
+
+  margin-top: 15px;
+
+  padding: 5px;
+
+  background: rgb(181, 238, 221);
+
+  border-radius: 8px;
+
+  box-shadow: -1px 0px 8px 0px rgba(34, 60, 80, 0.11) inset;
+}
+
+.well-card-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.well-card-settings-btn {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.well-card-settings-btn:active {
+  top: -12px;
+  right: 14px;
+
+  color: rgb(245, 229, 10);
+}
+
+.well-card-settings-popup {
+
+  padding: 8px;
+
+  position: absolute;
+  top: 25px;
+  right: 12px;
+
+  box-shadow: 0px 4px 7px 0px rgb(34 60 80 / 50%);
+
+  border-radius: 8px;
+
+  background-color: rgb(219, 185, 73);
+}
+
+.well-card-settings-item {
+  margin-bottom: 3px;
+  padding: 3px;
+  background: rgb(255, 248, 182);
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.well-card-settings-item:hover {
+  background-color: rgb(247, 232, 102);
+}
+
+.well-card-settings-item:active {
+  opacity: 0.5;
+}
+
+.well-card-update-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 93%;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  padding: 10px;
+  background-color: rgb(255, 248, 182);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.well-card-update-modal-btn {
+  position: relative;
+
+  margin-top: 3px;
+
+  padding: 4px 6px;
+
+  color: white;
+
+  background-color: cadetblue;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.well-card-update-modal-btn:active {
+  top: 1px;
+  left: 1px;
+
+  background-color: rgb(107, 211, 214);
+}
+
+.well-card-update-modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  cursor: pointer;
+}
+
+.add-well-btn {
+  margin: 0 auto;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+
+  width: max-content;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(83, 135, 1);
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.add-well-btn:active {
+  position: relative;
+
+  top: 2px;
+  left: 2px
+}
+
+.add-well-modal {
+
+  padding: 20px;
+
+  width: 71%;
+  max-height: 695px;
+
+  background: rgb(205, 253, 241);
+
+  position: fixed;
+  left: 12%;
+  top: 18%;
+
+  box-shadow: 0px 4px 15px 0px rgb(0 0 0 / 82%);
+
+  border-radius: 8px;
+}
+
+.modal-form {
+  margin-top: 10px;
+
+  background-color: cadetblue;
+}
+
+.modal-input {
+  position: relative;
+  top: 10px;
+
+  width: 85%;
+  height: 25px;
+
+  font-size: 20px;
+
+  border-radius: 6px;
+}
+
+.input-block {
+  margin-top: 20px;
+}
+
+.modal-input-label {
+  font-size: 25px;
+  font-weight: bold;
+
+  border-radius: 6px;
+}
+
+.modal-add-well-btn {
+  position: relative;
+
+  width: max-content;
+
+  margin: 0 auto;
+
+  padding: 8px 15px;
+  background-color: cadetblue;
+
+  color: white;
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.modal-add-well-btn:active {
+  top: 2px;
+  left: 2px;
+}
+
+.create-btn-wrapper {
+  margin-top: 35px;
+}
+
+.add-modal-close {
+  position: absolute;
+
+  margin: 0;
+
+  width: max-content;
+
+  right: 10px;
+  top: 10px;
+
+  cursor: pointer;
+}
+
+.validate-popup {
+  width: max-content;
+  height: max-content;
+
+  position: fixed;
+  top: 30%;
+  margin: 0 auto;
+
+  padding: 25px;
+
+  background-color: bisque;
+
+  box-shadow: 0px 4px 15px 0px rgb(0 0 0 / 82%);
+
+  border-radius: 8px;
+}
+
+.validate-err-text {
+  margin-bottom: 10px;
+}
+
+.btn-popup-close {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 7px;
+
+  font-weight: bold;
+  color: white;
+
+  background-color: cadetblue;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.btn-popup-close:active {
+  top: 2px;
+  left: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+.watcher-trouble {
+  background-color: rgba(255, 123, 0, 0.856);
+}
+
+.no-gti-data {
+  background-color: rgba(202, 16, 16, 0.89);
+}
+
+.ok-data {
+  background-color: rgb(85 175 11 / 87%);
+}
